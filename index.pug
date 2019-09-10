@@ -1,0 +1,72 @@
+doctype html
+html(lang = "pt-br")
+    head
+        title Ecossistema Declarative PUG
+        meta(charset = "utf-8")
+        meta(name = "viewport" scale = "1.0")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap")
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+        script(src="js/index.js")
+        style. 
+            p { 
+                color: gray;
+            }
+    body
+        - let user = { name : "Lucas", loggedIn: false, lastLogin: 6} 
+        section
+            div.container.p-5
+                div#app.row 
+                    div.col-md-12(align = "center")
+                        h1
+                            b Ecossistema de Aprendizagem
+                        h3#pageTitle Centro Universitário INTA - UNINTA
+                        p. 
+                            Utilize o painel abaixo para encontrar funcionalidades no 
+                            span.text-success Ecossistema
+                        input(type = "text" name = "" placeholder = "Encontrar no ecossistema" data-js='${ "NOT OK!" }').form-control.mb-5
+                    - const titles = ["Acolhida Virtual", "Institucional" , "Área do Aluno", "Ambiente Virtual", "Aplicativo UNINTA", "Avaliações"]   
+                    - const descript = ["Setor que faz contato com o aluno", "Outra descrição", "Mais uma descrição", "Finalizar aqui", "That's all folks"]
+                    - const links = ["https://ead.uninta.edu.br/acolhida-virtual/", "https://ead.uninta.edu.br/", "https://ead.uninta.edu.br/area-do-aluno/"]
+                    - const icons = { "src": "img/logo.png", "width" : "100px", "height" : "auto", "alt" : "Logo da Aiamis"}
+                    each n, i in titles
+                        div.col-md-4
+                            div.card.card-body.bg-dark
+                                img&attributes(icons).mb-3
+                                h4.text-white.mb-3= titles[i]
+                                p.bottom= descript[i]
+                                a.btn.btn-danger.text-white(href= links[i] target = "blank") Acessar
+
+        footer 
+            .container.text-white
+                .row.p-5
+                    .col-md-12.mb-5 
+                        h3 O mapa do site foi elaborado de acordo com o referencial teórico:
+                        p Georgouli, Katerina & Skalkidis, Ilias & Guerreiro, Pedro. (2008). A Framework for Adopting LMS to Introduce e-Learning in a Traditional Course. Educational Technology & Society. 11. 227-240. 
+                    div(align = "center").col-md-4 
+                        img&attributes(icons).mb-3
+                        h3.mb-5 Centro Universitário INTA - UNINTA
+                    .col-md-4 
+                        ul 
+                            li 
+                                h3 UNINTA
+                            li Conheça o UNINTA
+                            li Cursos de Graduação em EaD 
+                            li Cursos de Pós Graduação em EaD
+                            li Cursos Online
+                            li Processos Seletivos
+
+                    .col-md-4.mb-5
+                        ul 
+                            li 
+                                h3 Entre em Contato
+                            li (88) 3112 3500
+                            li (88) 9 9221 1714
+                            li (88) 9 9795 3555
+                            li ouvidoria@uninta.edu.br
+                            li Torne-se um polo UNINTA EAD
+
+                    div(align = "center").col-md-12.p-4
+                        p. 
+                            © Centro Universitário INTA - UNINTA | Diretoria de Inovação Educacional - PROEAD - Privacidade e condições de usos. 2019.

@@ -1,0 +1,16 @@
+{
+  "name": "ecossistema-uninta",
+  "version": "1.0.0",
+  "description": "Ecossistema de Aprendizagem UNINTA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ecossistema",
+    "UNINTA",
+    "PUG"
+  ],
+  "author": "lucgbrl",
+  "license": "MIT"
+}

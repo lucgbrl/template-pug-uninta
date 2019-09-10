@@ -1,0 +1,25 @@
+* { 
+    font-family: 'Ubuntu', sans-serif;
+}
+.card.card-body {
+    margin-bottom: 25px !important;
+    border-radius: 25px;
+}
+h1 { font-size: 3em !important;}
+.btn,
+input {
+    border-radius: 20px !important;
+    cursor: pointer;
+}
+.text-success { 
+    color: #28a745 !important;
+}
+
+footer{  
+    background: #081238 !important;
+}
+ul li {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
